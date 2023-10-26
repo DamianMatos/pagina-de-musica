@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ABITACK</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    
+    
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="container">
+            <a href="#hero" class="logo">ABITACK</a>
+            <nav>
+                <a href="#nosotros">Quienes somos?</a>
+                <a href="#artistas">Nuestra produccion</a>
+                <a href="#formulario">Contacto</a>
+                <a href="#comentarios">Comentarios</a>
+                <a href="/admin/login">Login</a>
+            </nav>
+        </div>
+    </header>
+    {{{body}}}
+
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://github.com/DamianMatos" target="_blank"><img
+                        src="/images/github-logo-2E3852456C-seeklogo.com.png" alt="Github"></a>
+                <a href="https://www.youtube.com/channel/UCN0U1RpwZhEnxa_kyi8r0zA" target="_blank"><img
+                        src="/images/Youtube_logo.png" alt="Youtube"></a>
+                <a href="https://www.instagram.com/kyezmusic/" target="_blank"><img src="/images/Instagram_icon.png"
+                        alt="Instagram"></a>
+                <a href="https://twitter.com/AbiTrack21" target="_blank"><img src="/images/twitter logo.png"
+                        alt="Twitter"></a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Abitack. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Script JavaScript -->
+    <script src="javascripts/main.js"></script>
+    
+
+
+
+    <script>
+        // Espera a que se cargue el DOM
+        document.addEventListener("DOMContentLoaded", function () {
+            // Obtiene una referencia al video y al botón
+            const dime = document.getElementById('dime');
+            const toggleSoundButton = document.getElementById('toggleSound')
+
+            dime.removeAttribute('controls');
+
+            // Agrega un event listener al botón
+            toggleSoundButton.addEventListener('click', function () {
+                if (dime.muted) {
+                    // Si el video está silenciado, desmútelo
+                    dime.muted = false;
+                    toggleSoundButton.textContent = '🎶';
+                } else {
+                    // Si el video no está silenciado, sáquelo de silencio
+                    dime.muted = true;
+                    toggleSoundButton.textContent = '🔇';
+                }
+            });
+        });
+    </script>
+
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const commentNameInput = document.getElementById("comment-name");
+            const commentInput = document.getElementById("comment");
+            const commentList = document.getElementById("comment-list");
+            const addCommentButton = document.getElementById("add-comment");
+
+            // Obtener comentarios guardados del Local Storage al cargar la página
+            const storedComments = JSON.parse(localStorage.getItem("comments")) || [];
+
+            // Función para guardar los comentarios en el Local Storage
+            const saveCommentsToLocalStorage = () => {
+                localStorage.setItem("comments", JSON.stringify(storedComments));
+            };
+
+            // Cargar comentarios almacenados
+            storedComments.forEach((commentData) => {
+                const commentElement = document.createElement("div");
+                commentElement.classList.add("comment");
+                commentElement.textContent = `${commentData.name}: ${commentData.commentText}`;
+                commentList.appendChild(commentElement);
+            });
+
+            addCommentButton.addEventListener("click", function () {
+                const name = commentNameInput.value.trim();
+                const commentText = commentInput.value.trim();
+
+                if (name !== "" && commentText !== "") {
+                    const commentElement = document.createElement("div");
+                    commentElement.classList.add("comment");
+                    commentElement.textContent = `${name}: ${commentText}`;
+                    commentList.appendChild(commentElement);
+                    commentNameInput.value = "";
+                    commentInput.value = "";
+
+                    // Guardar el nuevo comentario en el Local Storage
+                    storedComments.push({ name, commentText });
+                    saveCommentsToLocalStorage();
+                }
+            });
+        });
+
+        
+    </script>
+
+</body>

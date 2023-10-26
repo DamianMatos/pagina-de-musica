@@ -1,0 +1,29 @@
+<section id="galeriac">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <h4 style="font-size: 35px;">Agregar una nueva compra</h4>
+                <form action="/admin/shop/agregar" method="post">
+                    <div class="form-group">
+                        <input type="text1" class="form-control" placeholder="Titulo" name="titulo">
+
+                    </div>
+
+                    <div class="form-group">
+                        <textarea type="text1" class="form-control" placeholder="Subtitulo" name="subtitulo"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea type="text1" class="form-control" placeholder="Cuerpo" name="cuerpo">
+                        </textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </form>
+                {{#if error}}
+                    <p> {{message}} </p>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,1202 @@
+*{
+  box-sizing: border-box;
+
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+body{
+  font-family: 'roboto' , sans-serif;
+  margin: 0;
+}
+
+
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+
+button{
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 5);
+  box-shadow:  2px 2px 10px rgba(0, 0, 0, 5);
+  color: white;  
+  background-color: rgba(137, 43, 226, 0);
+
+
+
+}
+button:hover{
+  background-color: rgb(101, 33, 165);
+}
+
+
+.container{
+  max-width: 1400px;
+  margin: auto;
+
+}
+
+.color-acento{color: rgba(137, 43, 226, 0.805);}
+
+header{
+  
+  background-color: rgba(245, 245, 245, 0);
+  position: fixed;
+  width: 100%;
+  transition: top 0.3s;
+  z-index: 100;
+}
+
+
+
+header .logo{
+  margin: 0;
+  padding: 25px 10px;
+  font-weight: bold;
+  color: blueviolet;
+  font-size: 2.5em;
+}
+
+header .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+}
+
+header nav{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 25px;
+  
+}
+
+header a{
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+
+}
+
+header a:hover{
+  color: blueviolet;
+
+}
+
+#hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100vh;
+  color: white;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+   
+}
+#hero video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+#toggleSound {
+    position: absolute;
+    bottom: 10px; /* Ajusta la distancia desde la parte inferior según tus preferencias */
+    right: 10px; /* Ajusta la distancia desde la derecha según tus preferencias */
+    z-index: 1; /* Asegura que esté encima del video */
+  }
+  
+
+#hero h1 {
+  color: rgb(255, 255, 255);
+  font-size: 5em;
+  z-index: 0
+}
+
+
+#nosotros {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 50vh;
+  color: white;
+  background-image: linear-gradient(
+    0deg,
+    rgba(135, 132, 132, 0.749),
+    rgba(0, 0, 0, 0.853)
+  ),
+  url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#nosotros h1 {
+  color: white;
+}
+
+#h2nosotros {
+  font-size: 60px;
+}
+
+#pinicio {
+  font-size: 2.5em;
+}
+
+
+#nosotros .container{
+  text-align: center;
+  padding: 200px 12px;
+
+
+}
+
+#artistas{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  color: white;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url("/images/abitac2k.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#artistas .container{
+  padding: 100px 50px;
+
+}
+
+#artistas h2{
+  margin-top: 0;
+  font-size: 3.2em;
+}
+
+#pcartas {
+  font-size: 2.7em;
+  color: #fcf9f9cf;
+}
+
+
+#artistas .carta {
+  background-size: cover;
+  background-position: center center;
+  padding: 150px 0px;
+  margin: 50px;
+  border-radius: 70px;
+  min-height: 500px;
+  min-width: 300px;
+}
+
+.carta:first-child{
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+   ,url("/images/kyez.png");
+
+}
+
+.carta:nth-child(2){
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+   ,url("/images/celli.jpg");
+
+
+}
+
+.carta:nth-child(3){
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+   ,url("/images/tato.jpg");
+
+}
+
+
+.form-mapa-container {
+  display: flex;
+  justify-content: space-between; /* Espacio entre los elementos */
+  align-items: flex-start; /* Alineación arriba */
+}
+
+.formulario, .mapa {
+  flex: 1; /* Distribuye el espacio disponible de manera uniforme */
+}
+
+/* Estilos adicionales según tus preferencias */
+.formulario {
+  margin-right: 10px; /* Margen derecho para separar los elementos */
+}
+
+#h2form {
+  color: #f5f5f5;
+}
+
+#labelform {
+  color: #f5f5f5;
+}
+
+#formulario {
+  background-image: linear-gradient(
+    0deg,
+    rgba(135, 132, 132, 0.828),
+    rgba(0, 0, 0, 0.687)
+)
+ ,url("");
+
+}
+
+
+#final{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(30, 30, 30);
+  color: white;
+  height: 80vh;
+
+}
+
+#final h2{
+  font-size: 9vw;
+}
+
+#final button{
+  font-size: 5vw;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.social-icons {
+  margin-top: 10px;
+  text-align: center; /* Centra los elementos horizontalmente */
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #ffffff00;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.copyright {
+  margin-top: 20px;
+}
+
+
+/* Estilo inicial sin zoom para los elementos con la clase "carta" */
+.carta {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+/* Aplica zoom al pasar el mouse por encima de los elementos "carta" */
+.carta:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo inicial del logo y los elementos del nav */
+.logo, header.nav a {
+  transition: transform 0.3s ease;
+}
+
+/* Cambia la altura del logo y los elementos del nav cuando el encabezado no está en la parte superior */
+header:not(.white) .logo, header:not(.white) nav a {
+  transform-origin: top; /* Establece el punto de transformación en la parte superior */
+  margin-top: -20px;
+
+}
+
+/* Restablece la altura original del logo y los elementos del nav cuando el encabezado vuelve a estar en la parte superior */
+header.white .logo, header.white nav a {
+  transform: scaleY(1); /* Altura original */
+  transform-origin: center; /* Restablece el punto de transformación al centro */
+  
+}
+header.white .logo:hover{
+  transform: scale(1.2); /* Aumenta el tamaño al 120% */
+}
+
+
+/* Cambia el tamaño al pasar el mouse por encima del logo */
+.logo:hover {
+  transform: scale(1.2); /* Aumenta el tamaño al 120% */
+}
+
+
+#comentarios {
+  background-color: #f5f5f5;
+  padding: 40px;
+  margin: auto;
+  max-width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(30, 30, 30);
+  color: white;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  color: white;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url("/images/abitack  arte.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#h2com{
+  font-size: 70px; /* Tamaño de fuente más grande */
+  color: rgba(255, 255, 255, 0.873); /* Color morado */
+  margin-top: 0;
+  font-size: 3.2em;
+}
+
+.comment-form {
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 15px 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+  
+}
+
+#add-comment {
+  background-color: rgba(137, 43, 226, 0.792);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.comment-list {
+  text-align: left;
+  display: flex; /* Cambio a disposición en fila */
+  flex-wrap: wrap; /* Para que los comentarios se envuelvan a la siguiente línea */
+  justify-content: flex-start; /* Alineación a la izquierda */
+}
+
+
+.comment {
+  width: calc(27.00% - 60px); /* Para dividirlos en tres columnas */
+  margin: 10px; /* Espaciado entre los comentarios */
+  margin: 20px 10;
+  padding: 20px;
+  border-radius: 30px;
+  font-size: 22px;
+  background-color: rgba(137, 43, 226, 0.72);
+  border: 1px solid #0a0a0a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: center;
+  min-height: 10px;
+  min-width: 20px;
+}
+
+
+
+.campo {
+  margin: 10px 0;
+}
+
+.campo label {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+button[type="submit"] {
+  background-color: blueviolet;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(101, 33, 165);
+}
+
+
+/* Estilo para el encabezado cuando se vuelve blanco */
+.header-white {
+  background-color: rgb(255, 255, 255); /* Cambia el color a blanco */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 60px; /* Ancho más angosto cuando se convierte en blanco */
+  transition: all 0.5s;
+}
+
+header.white nav a {
+  color: rgb(255, 255, 255); /* Cambia el color de los elementos del nav cuando el encabezado es blanco */
+}
+/* Agrega estilos para el cambio de color de los elementos del nav cuando el encabezado sea blanco */
+header.white a:hover {
+  color: blueviolet; /* Cambia el color al pasar el mouse por encima */
+}
+
+.scroll_section {
+  scroll-margin-top: 70px;
+}
+
+@media (min-width: 720px){
+  header{
+      position: fixed;
+      width: 100%;
+      
+
+  }
+  header .container{
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  header nav{
+      flex-direction: row;
+      padding-bottom: 0;
+      padding-right: 20px;
+  }
+
+
+  #nosotros .container{
+     display: flex;
+     justify-content: space-evenly;
+
+  }
+  #nosotros .texto{
+      width: 50%;
+      max-width: 600px;
+      text-align: initial;
+      padding-left: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+
+  #nosotros .img-container{
+     background-image: url("Screenshot\ 2023-05-08\ 142717.png");
+     background-size: cover;
+     background-position: center center;
+     height: 700px;
+     width: 600px;
+  
+  }
+
+  #artistas .menu{
+      display: flex;
+      justify-content: center;
+  }
+
+  #artistas p{
+      display: flex;
+      margin-bottom:100px;
+  }
+
+  #artistas h3{
+      margin-top: 0;
+  }
+
+  #artistas .carta{
+      padding: 50px;
+  }
+
+
+  #final h2{
+      font-size: 5em;
+  }
+
+  #final button{
+      font-size: 2em;
+  }
+
+  footer .container{
+      justify-content: flex-end;
+  }
+
+
+}
+
+@media (min-width: 1200px){
+  #formulario{
+      background-position-x: calc(100vw - 800px);
+  }
+}
+
+/* Estilo para el título con animación */
+h1 {
+  font-size: 35px;
+  text-align: center;
+  animation: desplazamiento 2s ease infinite;
+  background-position: calc(100vw - 500px) 120px;
+  display: flex;
+  margin-top: 300px;
+  z-index: -95;
+}
+
+@keyframes desplazamiento {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(20px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+/* css pagina login*/
+
+#login {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  color: white;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url("/images/abi_negro-transformed.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.login-container {
+  text-align: center;
+  
+}
+
+
+
+.form-group {
+  margin: 10px 0;
+  
+}
+
+label {
+  display: block;
+}
+
+.input1[type="text"],
+.input1[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+
+/* css pagina kyez*/
+
+
+/* Estilo inicial sin zoom para los elementos con la clase "carta" */
+.carta1 {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+/* Aplica zoom al pasar el mouse por encima de los elementos "carta" */
+.carta1:hover {
+  transform: scale(1.1);
+}
+
+
+#galeria1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  color: white;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url("/images/abitack estre.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#galeria1 .container1{
+  padding: 100px 50px;
+
+}
+
+#galeria1h2{
+  margin-top: 0;
+  font-size: 3.2em;
+}
+
+#gcartas {
+  font-size: 2.7em;
+  color: #fcf9f9cf;
+}
+
+
+#galeria1 .carta1 {
+  background-size: cover;
+  background-position: center center;
+  padding: 150px 0px;
+  margin: 50px;
+  border-radius: 70px;
+  min-height: 500px;
+  min-width: 300px;
+  
+}
+
+.carta1:first-child{
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+   ,url("/images/animore.jpg");
+
+}
+
+.carta1:nth-child(2){
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+   ,url("/images/kyez/unfil.jpg");
+
+
+}
+
+.carta1:nth-child(3){
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+   ,url("/images/kyez/i came back.png");
+
+}
+
+.carta1:nth-child(4){
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+   ,url("/images/kyez/rave.jpg");
+
+}
+
+
+
+#galeria1 .menu1{
+  display: flex;
+  justify-content: center;
+}
+
+#galeria1 .gcartas{
+  display: flex;
+  margin-bottom:100px;
+}
+
+#galeria1 h3{
+  margin-top: 0;
+}
+
+#galeria1 .carta1{
+  padding: 50px;
+}
+
+
+/* galeria 2 */
+#galeria2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  color: white;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url("/images/kyez/abitack_estre-transformed.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#galeria2 .container2{
+  padding: 100px 50px;
+
+}
+
+#galeria2 h2{
+  margin-top: 0;
+  font-size: 3.2em;
+}
+
+#gcartas2 {
+  font-size: 2.7em;
+  color: #fcf9f9cf;
+}
+
+
+#galeria2 .carta2 {
+  background-size: cover;
+  background-position: center center;
+  padding: 150px 0px;
+  margin: 50px;
+  border-radius: 70px;
+  min-height: 500px;
+  min-width: 300px;
+  
+}
+
+.carta2:first-child{
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+   ,url("/images/kyez/promesa.jpg");
+
+}
+
+.carta2:nth-child(2){
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+   ,url("/images/kyez/danger.jpg");
+
+
+}
+
+.carta2:nth-child(3){
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+   ,url("/images/kyez/indi.jpg");
+
+}
+
+.carta2:nth-child(4){
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+   ,url("/images/kyez/dime.png");
+
+}
+
+
+
+#galeria2 .menu2{
+  display: flex;
+  justify-content: center;
+}
+
+#galeria2 .gcartas2{
+  display: flex;
+  margin-bottom:100px;
+}
+
+#galeria2 h3{
+  margin-top: 0;
+}
+
+#galeria2 .carta2{
+  padding: 50px;
+}
+
+/* Estilo inicial sin zoom para los elementos con la clase "carta" */
+.carta2 {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+/* Aplica zoom al pasar el mouse por encima de los elementos "carta" */
+.carta2:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+/* css pagina celli*/
+ 
+#galeriac{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  color: white;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url("/images/celli/abi_cielo-transformed.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#galeriac .containerc{
+  padding: 100px 50px;
+
+}
+
+#galeriac h2{
+  margin-top: 0;
+  font-size: 3.2em;
+}
+
+#cartasc {
+  font-size: 2.7em;
+  color: #fcf9f9cf;
+}
+
+
+#galeriac .cartac {
+  background-size: cover;
+  background-position: center center;
+  padding: 150px 0px;
+  margin: 50px;
+  border-radius: 70px;
+  min-height: 500px;
+  min-width: 300px;
+  
+}
+
+.cartac:first-child{
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+   ,url("/images/celli/fantasia.png");
+
+}
+
+.cartac:nth-child(2){
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+   ,url("/images/celli/dime.png");
+
+
+}
+
+.cartac:nth-child(3){
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+   ,url("/images/celli/besos mo.png");
+
+}
+
+.cartac:nth-child(4){
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+   ,url("/images/celli/pideme.png");
+
+}
+
+
+
+#galeriac .menuc{
+  display: flex;
+  justify-content: center;
+}
+
+#galeriac .cartasc{
+  display: flex;
+  margin-bottom:100px;
+}
+
+#galeriac h3{
+  margin-top: 0;
+}
+
+#galeriac .cartac{
+  padding: 50px;
+}
+
+/* Estilo inicial sin zoom para los elementos con la clase "carta" */
+.cartac {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+/* Aplica zoom al pasar el mouse por encima de los elementos "carta" */
+.cartac:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+/* css pagina tato*/
+
+#galeriat{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  color: white;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url("/images/kyez/abitack_luces-transformed.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#galeriat .containert{
+  padding: 100px 50px;
+
+}
+
+#galeriat h2{
+  margin-top: 0;
+  font-size: 3.2em;
+}
+
+#cartast {
+  font-size: 2.7em;
+  color: #fcf9f9cf;
+}
+
+
+#galeriat .cartat {
+  background-size: cover;
+  background-position: center center;
+  padding: 150px 0px;
+  margin: 50px;
+  border-radius: 70px;
+  min-height: 500px;
+  min-width: 300px;
+  
+}
+
+.cartat:first-child{
+  background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+   ,url("/images/kyez/dime.png");
+
+}
+
+
+
+#galeriat .menut{
+  display: flex;
+  justify-content: center;
+}
+
+#galeriat .cartast{
+  display: flex;
+  margin-bottom:100px;
+}
+
+#galeriat h3{
+  margin-top: 0;
+}
+
+#galeriat .cartat{
+  padding: 50px;
+}
+
+/* Estilo inicial sin zoom para los elementos con la clase "carta" */
+.cartat {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+/* Aplica zoom al pasar el mouse por encima de los elementos "carta" */
+.cartat:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+/* seccion logout y compras*/
+
+
+
+#cerrar-sesion {
+  position: fixed;
+    top: 30px; /* Ajusta la distancia desde la parte superior según tu preferencia */
+    right: 60px; /* Ajusta la distancia desde la derecha según tu preferencia */
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f500;
+    border: 1px solid #cccccc00;
+}
+
+.btn-logout {
+  background-color: #9913b7; /* Color de fondo para el botón de cierre de sesión */
+  color: #ffffff; /* Color del texto del botón */
+  padding: 10px 20px; /* Relleno interno del botón */
+  text-decoration: none; /* Quita el subrayado del enlace */
+  border-radius: 5px; /* Borde redondeado para el botón */
+}
+
+#fondoshop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  color: white;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url("/images/kyez/abitack_luces-transformed.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+

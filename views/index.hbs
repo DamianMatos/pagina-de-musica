@@ -1,0 +1,109 @@
+    <section id="hero">
+        <h1 id="hero h1">Produccion<br>Musical</h1>
+        <div id="hero">
+            <video id="dime" autoplay loop muted playsinline controls>
+                <source src="/images/dime.mp4" type="video/mp4">
+                Tu navegador no admite la reproducción de videos.
+            </video>
+            <button id="toggleSound">
+                🎵
+            </button>
+        </div>
+    </section>
+
+    
+<section id="nosotros" class="scroll_section">
+
+    <h2 id="h2nosotros">Somos <span class="color-acento"> ABITACK</span></h2>
+    <p id="pinicio">Una productora musical con mas de 10 años de experiencia representando artistas
+        capaces de llevarte a lo mas alto y ser una estrella .</p>
+
+</section>
+
+<section id="artistas" class="scroll_section">
+    <div class="container">
+        <h2>Nuestros Artistas</h2>
+        <div class="menu">
+            <div class="carta">
+                <h3>Kyez</h3>
+                <p id="pcartas">Productor <br>Musical</p>
+                <a href="/kyez" target="_blank">
+                    <button>+ info</button>
+                </a>
+            </div>
+            <div class="carta">
+                <h3>Agus Celli</h3>
+                <p id="pcartas">Compositor <br>y<br>Cantante</p>
+                <a href="/celli" target="_blank">
+                    <button>+ info</button>
+                </a>
+            </div>
+            <div class="carta">
+                <h3>Tato</h3>
+                <p id="pcartas">Compositor <br>y<br>Cantante</p>
+                <a href="/tato" target="_blank">
+                    <button>+ info</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="formulario" class="scroll_section">
+    <div class="container">
+        <div class="form-mapa-container">
+            <div class="formulario">
+                <h2 id="h2form">Formulario de Contacto</h2>
+                <form action="/" method="post">
+                    <div class="campo">
+                        <label id="labelform" for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="campo">
+                        <label id="labelform" for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                    </div>
+                    <div class="campo">
+                        <label id="labelform" for="correo">Correo Electrónico:</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </div>
+                    <div class="campo">
+                        <label id="labelform" for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+                <p>{{message}}</p>
+            </div>
+            <div class="mapa">
+                <h2 id="h2form">Ubicación</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1638.4390334553848!2d-58.17097014339415!3d-34.783844790267516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32639cbdce2d5%3A0x98c3e9bfa17b1282!2sC.%2047%205953%2C%20B1861BBG%20Platanos%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1697858199734!5m2!1ses-419!2sar"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+   <section id="comentarios" class="scroll_section">
+        <section><h2 id="h2com">Sección de Comentarios</h2></section>
+
+        <div class="comments-container">
+
+            <div class="comment-form">
+                <input type="text" id="comment-name" placeholder="Tu nombre">
+                <input type="text" id="comment" placeholder="Escribe un comentario">
+                <button id="add-comment">Agregar Comentario</button>
+            </div>
+
+            <div class="comment-list" id="comment-list">
+                <!-- Aca se mostrarán los comentarios -->
+            </div>
+        </div>
+    </section>
+
+
+    <section id="final">
+        <h2>Que esperas para ser parte de ABITACK</h2>
+        <button> Contactame YA</button>
+    </section>
